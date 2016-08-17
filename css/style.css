@@ -1,38 +1,101 @@
 body {
-  background-image: url('http://7-themes.com/data_images/out/20/6835095-grass-landscape-background.jpg');
-  background-color: #0269C2;
+  background-repeat: no-repeat;
+  background-color: #000283;
+  font-family: avenir, sans-serif;
+  letter-spacing: 2px;
 }
-.header {
-  margin: 10% 20% 10% 20%;
-  border: 5px solid white;
-  color: white;
-}
-h3 {
-  margin: 25px 0 25px 0;
-}
-.content {
-  color: white;
-  padding: 20px;
-  margin-bottom: 5%;
-  box-shadow: inset 0 0 20px 0px #000;
-  background-color: #272829;  
-}
-#about, #road, #projects, #contact {
-  width: 100%;
-}
-#about {
-  padding: 0 50px 50px 50px;
-}
-#about li {
-  text-align: left;
-  list-style-type: none;
-}
-#road img {
-  max-width: 200px;  
+.container {
+  background-color: #000283;
+  color: #000000;
 }
 
-/* JQUERY CLASSES */
-.jq-thumb {
-  border: 2px solid blue;
-  box-shadow: inset 0 0 10px 0;
+/*NAVBAR*/
+nav {
+  margin-right: 2%;
+}
+nav ul {
+  background-color: rgba(0, 255, 255, 0.5);
+}
+nav ul li a {
+  color: #FFFFFF;
+}
+
+/*HEADER*/
+.landing {
+  color: white;
+  height: 65vh;
+}
+#landing-page {
+  border: 8px white solid;
+  padding: 2%;
+  width: 75%;
+}
+.landing h1 {
+  font-size: 4em;
+}
+.landing {
+  margin-top: 35vh;
+}
+.title {
+  margin: 0px;
+  padding: 5px 0px 20px 0px;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+/*ABOUT PAGE*/
+#about-page {
+  background-color: #F1F1F1;
+  /*height: 100vh;*/
+}
+
+/*FULL STACK PAGE*/
+#fullstack-page {
+  background-color: #F1F1F1;
+}
+.fullstack-icons img {
+  margin-top: 5px;
+}
+
+/*PORTFOLIO PAGE*/
+#portfolio-page {
+  background-color: #F1F1F1;
+}
+.thumbnails a img:hover {
+  background-color: #000283;
+}
+.thumbnails a {
+  outline: none;
+}
+.row {
+  margin: 4%;
+}
+
+/*COMMENT PAGE*/
+#comment-page {
+  background-color: #F1F1F1;
+  height: 90vh;
+}
+input {
+  width: 100%;
+  margin: 2px;
+}
+.button-area {
+  background-color: #00ACC1;
+  padding: 30px;
+}
+.button-area button {
+  margin: 2px;
+}
+.button-area a button:hover {
+  color: yellow;
+  text-decoration: none;
+}
+.to-top {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
+li {
+  display-style: none;
 }
