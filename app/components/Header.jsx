@@ -10,11 +10,11 @@ const Header = () => {
         <h1 className="center">Alejandro Varona</h1>
         <h3 className="center">Cool guy</h3>
       </div>
-      <nav>
+      <nav className="center">
         <Tabs className="dashboard-tabs">
-          <Tab label="Home" />
-          <Tab label="About" />
-          <Tab label="Portfolio" />
+          <Tab label="Home" href="#home" />
+          <Tab label="About" href="#about" />
+          <Tab label="Portfolio" href="#portfolio" />
           <Tab label="Contact" />
         </Tabs>
       </nav>

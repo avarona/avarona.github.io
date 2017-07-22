@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../components/Header.jsx';
+import Portfolio from '../components/Portfolio.jsx';
 
 class AppContainer extends Component {
 	constructor(props){
@@ -11,6 +12,7 @@ class AppContainer extends Component {
 		return (
 			<div>
         <Header />
+				<Portfolio />
       </div>
     )
   }

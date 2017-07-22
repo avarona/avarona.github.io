@@ -1,19 +1,25 @@
 body {
-  background: #F5F5F5 url('/style/images/nyc-skyline.jpg') no-repeat;
-  background-size: 100%;
+  background-color: #F5F5F5;
   margin: 0;
   padding: 0;
 }
 
 .header {
-  margin-top: 5%;
+  background: url('/style/images/nyc-skyline.jpg') no-repeat;
+  background-size: 100%;
+  min-width: 800px;
+  box-shadow: inset 0 -50px 50px -10px #F5F5F5;
+  padding-top: 5%;
   .name {
-    margin-bottom: 4%;
+    padding-bottom: 4%;
     font-size: 36px;
     font-family: sans-serif;
   }
+  nav {
+    width: 60%;
+  }
   .profile {
-    margin-top: 4%;
+    padding-top: 4%;
     .avatar {
       width: 200px;
       height: 200px;
@@ -30,5 +36,5 @@ body {
 }
 
 .dashboard-tabs > div{
-    background-color: #333 !important;
+  background-color: #333 !important;
 }
