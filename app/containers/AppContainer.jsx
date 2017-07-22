@@ -10,7 +10,6 @@ class AppContainer extends Component {
 	render() {
 		return (
 			<div>
-				<h1>App Container</h1>
         <Header />
       </div>
     )

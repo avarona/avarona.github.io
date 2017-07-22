@@ -27,6 +27,15 @@ module.exports = {
           'css-loader', // translates CSS into CommonJS
           'sass-loader', // compiles Sass to CSS
         ]
+      }, {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      }, {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        loader: [
+          'file-loader',
+          'url-loader'
+        ]
       }
     ]
   }
