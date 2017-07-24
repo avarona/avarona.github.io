@@ -18,6 +18,7 @@ const styles = {
   }
 };
 
+// TODO: change to smaller thumbnails
 const projectData = [
   {
     img: '/style/images/beatles.jpeg',
@@ -40,25 +41,29 @@ const projectData = [
 
 const Portfolio = () => {
   return (
-    <div style={styles.root}>
-      <GridList id="portfolio" style={styles.gridList} cellHeight={200} cols="2" padding={50}>
-        {
-          projectData.map((project) => (
-            <GridTile
-              key={project.img}
-              title={project.title}
-              actionIcon={
-                <IconButton>
-                  <StarBorder color="white" />
-                </IconButton>
-              }>
-              <a href={project.website} target="_blank" rel="noopener noreferrer">
-                <img src={project.img} />
-              </a>
-            </GridTile>
-          ))
-        }
-      </GridList>
+    <div>
+      <h1 className="center">Deployed</h1>
+      <div style={styles.root}>
+        <GridList id="portfolio" style={styles.gridList} cellHeight={200} cols="2" padding={50}>
+          {
+            projectData.map((project) => (
+              <GridTile
+                key={project.img}
+                title={project.title}
+                actionIcon={
+                  <IconButton>
+                    <StarBorder color="white" />
+                  </IconButton>
+                }>
+                <a href={project.website} target="_blank" rel="noopener noreferrer">
+                  <img src={project.img} />
+                </a>
+              </GridTile>
+            ))
+          }
+        </GridList>
+      </div>
+      <h1 className="center">Repos</h1>
     </div>
   )
 }

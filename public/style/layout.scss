@@ -4,6 +4,17 @@ body {
   padding: 0;
 }
 
+.center {
+  display: table;
+  margin: 0 auto;
+}
+.round {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+/*  HEADER   */
 .header {
   background: url('/style/images/nyc-skyline.jpg') no-repeat;
   background-size: 100%;
@@ -25,16 +36,26 @@ body {
       height: 200px;
       border-radius: 50%;
       box-shadow: 0 0 50px #FED27C;
-      // border: 1px solid black;
     }
   }
 }
-
-.center {
-  display: table;
-  margin: 0 auto;
+.dashboard-tabs > div {
+  background-color: #333 !important;
 }
 
-.dashboard-tabs > div{
-  background-color: #333 !important;
+/*  ABOUT   */
+.comment {
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  div {
+    vertical-align: text-top;
+    display: inline-block;
+    word-wrap: break-word;
+    width: 25%;
+    padding: 0 10px;
+  }
+  h2 {
+    text-align: center;
+  }
 }
