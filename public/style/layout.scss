@@ -2,8 +2,8 @@ body {
   background-color: #F5F5F5;
   margin: 0;
   padding: 0;
+  min-width: 940px;
 }
-
 .center {
   display: table;
   margin: 0 auto;
@@ -13,18 +13,25 @@ body {
   height: 75px;
   border-radius: 50%;
 }
+.line {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 40px 35px;
+}
 
-/*  HEADER   */
+/*  HEADER  */
 .header {
   background: url('/style/images/nyc-skyline.jpg') no-repeat;
   background-size: 100%;
-  min-width: 800px;
   box-shadow: inset 0 -50px 50px -10px #F5F5F5;
   padding-top: 5%;
   .name {
     padding-bottom: 4%;
-    font-size: 36px;
-    font-family: sans-serif;
+    font-size: 40px;
+    font-family: 'Pacifico', cursive, sans-serif;
   }
   nav {
     width: 60%;
@@ -43,19 +50,45 @@ body {
   background-color: #333 !important;
 }
 
-/*  ABOUT   */
-.comment {
+/*  ABOUT  */
+.social-media {
   width: 100%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 290px;
+  margin: 3% auto;
+  a {
+    margin: 10px;
+    padding: 15px 10px;
+    color: grey;
+    border: .5px solid grey;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+  }
+  a:hover {
+    color: black;
+    background-color: white;
+    border: .5px solid #F5F5F5;
+    box-shadow: 2px 2px 6px grey;
+  }
+}
+.comment {
+  display: inline-block;
+  text-align: center;
   div {
     vertical-align: text-top;
     display: inline-block;
     word-wrap: break-word;
-    width: 25%;
-    padding: 0 10px;
+    width: 20%;
+    padding: 40px;
   }
   h2 {
     text-align: center;
   }
+  h3 {
+    text-align: left;
+  }
+}
+
+/*  PORTFOLIO  */
+.grid {
+  height: 100vh;
 }

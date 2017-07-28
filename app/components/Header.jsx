@@ -2,22 +2,39 @@ import React from 'react';
 import path from 'path';
 
 import { Tabs, Tab } from 'material-ui/Tabs';
+import TweenMax from 'gsap';
+import scrollTo from '../../node_modules/gsap/ScrollToPlugin';
+import Sticky from 'react-sticky-el';
 
 const Header = () => {
   return (
-    <div className="header">
+    <div id="home" className="header">
       <div className="name">
         <h1 className="center">Alejandro Varona</h1>
         <h3 className="center">Cool guy</h3>
       </div>
-      <nav className="center">
-        <Tabs className="dashboard-tabs">
-          <Tab label="Home" href="#home" />
-          <Tab label="About" href="#about" />
-          <Tab label="Portfolio" href="#portfolio" />
-          <Tab label="Contact" />
-        </Tabs>
-      </nav>
+      <Sticky>
+        <nav className="center">
+          <Tabs className="dashboard-tabs">
+            <Tab label="Home" onClick={() => {
+              TweenMax.to(window, 0.8, {
+                scrollTo: { y: '#home' }
+              })
+            }} />
+            <Tab label="About" onClick={() => {
+              TweenMax.to(window, 0.8, {
+                scrollTo: { y: '#about', offsetY: 47 }
+              })
+            }} />
+            <Tab label="Portfolio" onClick={() => {
+              TweenMax.to(window, 0.8, {
+                scrollTo: { y: '#portfolio', offsetY: 47 }
+              })
+            }} />
+            <Tab label="Contact" />
+          </Tabs>
+        </nav>
+      </Sticky>
       <div className="profile">
         <img className="avatar center" src={path.join(__dirname, 'style/images/profile.png')} />
       </div>

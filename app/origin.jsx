@@ -7,6 +7,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import '../public/style/layout.scss';
 
+const injectTapEventPlugin = require('react-tap-event-plugin');
+injectTapEventPlugin();
+
 ReactDOM.render(
   <MuiThemeProvider>
     <Routes />

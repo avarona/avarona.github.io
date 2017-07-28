@@ -41,10 +41,11 @@ const projectData = [
 
 const Portfolio = () => {
   return (
-    <div>
-      <h1 className="center">Deployed</h1>
+    <div className="grid">
+      <hr id="portfolio" className="line" />
+      <h1 className="title center">Deployed</h1>
       <div style={styles.root}>
-        <GridList id="portfolio" style={styles.gridList} cellHeight={200} cols="2" padding={50}>
+        <GridList style={styles.gridList} cellHeight={200} cols={2} padding={50}>
           {
             projectData.map((project) => (
               <GridTile
@@ -63,7 +64,7 @@ const Portfolio = () => {
           }
         </GridList>
       </div>
-      <h1 className="center">Repos</h1>
+      <h1 className="title center">Repos</h1>
     </div>
   )
 }
