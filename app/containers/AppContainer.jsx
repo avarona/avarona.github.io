@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
 import Header from '../components/Header.jsx';
-import Portfolio from '../components/Portfolio.jsx';
 import About from '../components/About.jsx';
+import Portfolio from '../components/Portfolio.jsx';
+import Contact from '../components/Contact.jsx';
 
 class AppContainer extends Component {
 	constructor(props){
@@ -15,6 +16,7 @@ class AppContainer extends Component {
         <Header />
 				<About />
 				<Portfolio />
+				<Contact />
       </div>
     )
   }
