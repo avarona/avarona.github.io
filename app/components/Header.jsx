@@ -13,7 +13,7 @@ const Header = () => {
         <h1 className="center">Alejandro Varona</h1>
         <h3 className="center">Cool guy</h3>
       </div>
-      <Sticky>
+      <Sticky style={{zIndex: 1}}>
         <nav className="center">
           <Tabs className="dashboard-tabs" style={{zIndex: 99999}}>
             <Tab label="Home" onClick={() => {
