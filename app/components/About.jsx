@@ -85,24 +85,54 @@ class About extends Component {
         <div className="comment center">
           <div>
             <h2>// TECH</h2>
-            <h3>I create web applications with Javascript</h3>
+            <h3>I create web applications from front to back, using Javascript with it's increasingly popular libraries and frameworks like React or JQuery.</h3>
           </div>
           <div>
             <h2>// DESIGN</h2>
-            <h3>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
+            <h3>Open source libraries are great, but they are no match to having the necessary CSS skills or a keen eye for detail in front-end design.</h3>
           </div>
           <div>
-            <h2>// INNOVATION</h2>
-            <h3>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
+            <h2>// ENGINEER</h2>
+            <h3>I don't shy away from tackling problems head on, visiting all possible outlets until the best solution is found.</h3>
           </div>
         </div>
         <hr className="line" />
         <div>
           <h1 id="about" className="title center">About Me</h1>
-          <div className="left-block">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          <div className="line">
+            <div className="left-block">
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <ul>
+                <li>
+                  Javascript
+                  <ul>
+                    <li>React</li>
+                    <li>Express</li>
+                    <li>Node.js</li>
+                    <li>JQuery</li>
+                  </ul>
+                </li>
+                <li>
+                  HTML
+                  <ul>
+                    <li>CSS</li>
+                    <li>Sass</li>
+                    <li>Bootstrap</li>
+                  </ul>
+                </li>
+                <li>
+                  Sequelize
+                  <ul>
+                    <li>SQL</li>
+                  </ul>
+                </li>
+                <li>Webpack</li>
+                <li>Gulp</li>
+                <li>Git</li>
+              </ul>
+            </div>
+            <div id="tech-tree" className="right-block" />
           </div>
-          <div id="tech-tree" className="right-block" />
         </div>
       </div>
     )
