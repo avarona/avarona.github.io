@@ -101,7 +101,7 @@ body {
 
 /*  CONTACT  */
 #contact-info {
-  height: 150vh;
+  height: 80vh;
 }
 #contact-input {
   width: 80%;
@@ -132,11 +132,11 @@ body {
 
 /*  FOOTER  */
 .footer {
-  position: absolute;
+  position: relative;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #efefef;
+  background-color: #dedede;
   text-align: center;
 }
