@@ -29,7 +29,14 @@ const data = {
 }
 const options = {
   width: '450px',
-  height: '400px'
+  height: '400px',
+  interaction: {
+    zoomView: false,
+    dragView: false,
+    dragNodes: true,
+    selectable: true,
+    selectConnectedEdges: true
+  }
 };
 
 class About extends Component {

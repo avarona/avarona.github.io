@@ -15,7 +15,7 @@ const Header = () => {
       </div>
       <Sticky style={{zIndex: 1}}>
         <nav className="center">
-          <Tabs className="dashboard-tabs" style={{zIndex: 1}}>
+          <Tabs className="dashboard-tabs" style={{zIndex: 9999}}>
             <Tab label="Home" onClick={() => {
               TweenMax.to(window, 0.8, {
                 scrollTo: { y: '#header' }
