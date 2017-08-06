@@ -33,7 +33,7 @@ const Header = () => {
             }} />
             <Tab label="Contact" onClick={() => {
               TweenMax.to(window, 0.8, {
-                scrollTo: { y: '#contact' }
+                scrollTo: { y: '#contact', offsetY: 47 }
               })
             }} />
           </Tabs>

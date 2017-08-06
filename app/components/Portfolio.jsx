@@ -21,19 +21,19 @@ const styles = {
 // TODO: change to smaller thumbnails
 const deployedApps = [
   {
-    img: '/style/images/beatles.jpeg',
+    img: '/style/images/thumbs/beatles.jpeg',
     title: 'The Beatles Tribute',
     website: 'https://avarona.github.io/beatles'
   }, {
-    img: '/style/images/guessing-game.jpeg',
+    img: '/style/images/thumbs/guessing-game.jpeg',
     title: 'Guessing Game',
     website: 'https://avarona.github.io/guessingGame'
   }, {
-    img: '/style/images/quote-machine.jpeg',
+    img: '/style/images/thumbs/quote-machine.jpeg',
     title: 'Quote Machine',
     website: 'https://avarona.github.io/quote-machine'
   }, {
-    img: '/style/images/speechwriter.jpeg',
+    img: '/style/images/thumbs/speechwriter.jpeg',
     title: 'SpeechWriter',
     website: 'https://speechwriter.herokuapp.com'
   }

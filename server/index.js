@@ -24,7 +24,7 @@ router.post('/email', function(req, res, next) {
       Name: ${req.body.name}\n
       Email: ${req.body.email}\n
       Message: ${req.body.message}`, // plain text body
-    html: `<div style="width: 100">
+    html: `<div style="width: 100%;">
       Name: ${req.body.name}</div>
       Email: <div>${req.body.email}</div>
       Message: <div>${req.body.message}</div>` // html body
@@ -35,8 +35,8 @@ router.post('/email', function(req, res, next) {
     if (error) {
       return console.log(error);
     }
-    res.send('email sent')
     console.log('Message %s sent: %s', info.messageId, info.response);
+    res.status(200).send()
   });
 
 });

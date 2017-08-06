@@ -4,22 +4,26 @@ import axios from 'axios';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import CircularProgress from 'material-ui/CircularProgress';
+import Paper from 'material-ui/Paper';
 
 const styles = {
-  textField: {
-    // display: 'table',
-    width: '100%',
-    position: 'relative',
-    margin: '0 0 0 auto'
-  },
-  circular: {
-    position: 'relative',
-    left: '0',
-    right: '0',
-    zIndex: '0'
-  },
   inputForm: {
     width: '80%'
+  },
+  textField: {
+    width: '100%',
+    position: 'relative',
+    margin: '0 10%',
+    zIndex: '0'
+  },
+  buttons: {
+    float: 'right'
+  },
+  flatButton: {
+    zIndex: '0'
+  },
+  circular: {
+    zIndex: '1'
   }
 }
 
@@ -46,11 +50,12 @@ class ContactDialog extends Component {
       name: '',
       email: '',
       message: '',
-      mailProgress: false
+      mailProgress: false,
     })
   }
 
-  handleSubmit() {
+  handleSubmit(evt) {
+    evt.preventDefault();
     // if null dont send
     this.setState({mailProgress: true})
     axios.post('/api/email', {
@@ -58,63 +63,71 @@ class ContactDialog extends Component {
       email: this.state.email,
       message: this.state.message
     })
-    .then(res => {
+    .then(() => {
       this.handleClose()
-      console.log(res.data)
     })
     .catch(err => console.error(err))
   }
 
   render() {
     return (
-      <div id="contact-input" className="center">
-        <form>
+      <Paper className="paper">
+        <form onSubmit={this.handleSubmit}>
           <div style={styles.inputForm}>
             {
-              (!this.state.mailProgress)
-              ? <CircularProgress style={styles.circular} />
+              (this.state.mailProgress)
+              ? <div className="circularProgress">
+                <CircularProgress style={styles.circular} />
+              </div>
               : null
             }
             <TextField
               style={styles.textField}
+              name="name"
+              type="text"
               hintText="John Doe"
               floatingLabelText="Name"
-              name="name"
               value={this.state.name}
               onChange={this.handleChange}
             />
             <TextField
               style={styles.textField}
-              hintText="example@email.com"
-              floatingLabelText="Email"
               name="email"
+              type="email"
+              hintText="example@email.com"
+              errorText={this.state.errorText}
+              floatingLabelText="Email"
               value={this.state.email}
               onChange={this.handleChange}
             />
             <TextField
               style={styles.textField}
-              multiLine={true}
+              name="message"
+              type="text"
               hintText="Nice profile, Alex!"
               floatingLabelText="Message"
-              name="message"
+              multiLine={true}
+              rows={3}
               value={this.state.message}
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          <div className="buttons">
             <FlatButton
+              style={styles.flatButton}
               label="Cancel"
               primary={false}
               onTouchTap={this.handleClose}
             />
-            <FlatButton
-              label="Submit"
-              primary={true}
-              onTouchTap={this.handleSubmit}
-            />
+             <FlatButton
+                style={styles.flatButton}
+                label="Submit"
+                type="submit"
+                primary={true}
+              />
           </div>
         </form>
-      </div>
+      </Paper>
     )
   }
 }

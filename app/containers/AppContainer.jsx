@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Header from '../components/Header.jsx';
 import About from '../components/About.jsx';
 import Portfolio from '../components/Portfolio.jsx';
 import Contact from '../components/Contact.jsx';
 
-class AppContainer extends Component {
-
-	render() {
+const AppContainer = () =>  {
 		return (
 			<div>
         <Header />
@@ -17,6 +15,5 @@ class AppContainer extends Component {
       </div>
     )
   }
-}
 
 export default AppContainer;

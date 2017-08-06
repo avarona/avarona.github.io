@@ -105,8 +105,38 @@ body {
 }
 #contact-input {
   width: 80%;
-  form {
+  padding: 50px 0;
+  .image-container {
+    display: inline-block;
+    position: relative;
+    text-align: center;
     width: 50%;
-    margin: 0 0 0 auto;
   }
+  .paper {
+    display: inline-block;
+    position: relative;
+    float: right;
+    width: 50%;
+    .circularProgress {
+      display: inline;
+      position: absolute;
+      left: 45%;
+      top: 40%;
+    }
+    .buttons {
+      right: 20%;
+      padding: 5%;
+    }
+  }
+}
+
+/*  FOOTER  */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }
