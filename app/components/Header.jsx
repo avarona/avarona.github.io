@@ -8,22 +8,22 @@ import Sticky from 'react-sticky-el';
 
 const Header = () => {
   return (
-    <div id="home" className="header">
+    <div id="header">
       <div className="name">
         <h1 className="center">Alejandro Varona</h1>
         <h3 className="center">Cool guy</h3>
       </div>
       <Sticky style={{zIndex: 1}}>
         <nav className="center">
-          <Tabs className="dashboard-tabs" style={{zIndex: 99999}}>
+          <Tabs className="dashboard-tabs" style={{zIndex: 1}}>
             <Tab label="Home" onClick={() => {
               TweenMax.to(window, 0.8, {
-                scrollTo: { y: '#home' }
+                scrollTo: { y: '#header' }
               })
             }} />
             <Tab label="About" onClick={() => {
               TweenMax.to(window, 0.8, {
-                scrollTo: { y: '#about', offsetY: 47 }
+                scrollTo: { y: '#about', offsetY: 57 }
               })
             }} />
             <Tab label="Portfolio" onClick={() => {
@@ -33,7 +33,7 @@ const Header = () => {
             }} />
             <Tab label="Contact" onClick={() => {
               TweenMax.to(window, 0.8, {
-                scrollTo: { y: '#contact', offsetY: 47 }
+                scrollTo: { y: '#contact' }
               })
             }} />
           </Tabs>

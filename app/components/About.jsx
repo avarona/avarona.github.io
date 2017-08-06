@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/lib/fa';
 import vis from 'vis';
 
-import ContactDialog from './ContactDialog.jsx';
-
 const nodes = [
   {id: 1, image: 'style/images/html.png', shape: 'circularImage', size: 40},
   {id: 2, image: '/style/images/css.png', shape: 'circularImage', size: 40},
@@ -37,19 +35,6 @@ const options = {
 class About extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      dialogOpen: false
-    }
-    this.handleDialogOpen = this.handleDialogOpen.bind(this);
-    this.handleDialogClose = this.handleDialogClose.bind(this);
-  }
-
-  handleDialogOpen() {
-    this.setState({dialogOpen: true});
-  }
-
-  handleDialogClose() {
-    this.setState({dialogOpen: false});
   }
 
   componentDidMount() {
@@ -60,7 +45,7 @@ class About extends Component {
   render() {
     return (
       <div>
-        <div className="social-media center">
+        <div id="social-media" className="center">
           <a href="https://www.twitter.com/alejandrov50" target="_blank" rel="noopener noreferrer">
             <FaTwitter size={30} />
           </a>
@@ -70,30 +55,23 @@ class About extends Component {
           <a href="https://www.github.com/avarona" target="_blank" rel="noopener noreferrer">
             <FaGithub size={30} />
           </a>
-          <a href="#" onClick={this.handleDialogOpen}>
+          <a href="mailto:avarona10@gmail.com" target="_blank" rel="noreferrer noopener">
             <FaEnvelope size={30} />
           </a>
-          {
-            (this.state.dialogOpen)
-            ? <ContactDialog
-              dialogOpen={this.state.dialogOpen}
-              handleClose={this.handleDialogClose} />
-            : null
-          }
         </div>
         <hr className="line" />
         <div className="comment center">
           <div>
-            <h2>// TECH</h2>
-            <h3>I create web applications from front to back, using Javascript with it's increasingly popular libraries and frameworks like React or JQuery.</h3>
+            <h2>* TECH *</h2>
+            <h4>&emsp;I create web applications from front to back, using Javascript with it's increasingly popular libraries and frameworks like React or JQuery.</h4>
           </div>
           <div>
-            <h2>// DESIGN</h2>
-            <h3>Open source libraries are great, but they are no match to having the necessary CSS skills or a keen eye for detail in front-end design.</h3>
+            <h2>* DESIGN *</h2>
+            <h4>&emsp;Open source libraries are great, but they are no match to having the necessary CSS skills or a keen eye for detail in front-end design.</h4>
           </div>
           <div>
-            <h2>// ENGINEER</h2>
-            <h3>I don't shy away from tackling problems head on, visiting all possible outlets until the best solution is found.</h3>
+            <h2>* ENGINEER *</h2>
+            <h4>&emsp;I don't shy away from tackling problems head on, visiting all possible outlets until the best solution is found.</h4>
           </div>
         </div>
         <hr className="line" />

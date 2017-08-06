@@ -6,9 +6,6 @@ import Portfolio from '../components/Portfolio.jsx';
 import Contact from '../components/Contact.jsx';
 
 class AppContainer extends Component {
-	constructor(props){
-		super(props)
-	}
 
 	render() {
 		return (

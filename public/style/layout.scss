@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 940px;
+  font-family: 'Lato';
 }
 .center {
   display: table;
@@ -28,7 +29,7 @@ body {
 }
 
 /*  HEADER  */
-.header {
+#header {
   background: url('/style/images/nyc-skyline.jpg') no-repeat;
   background-size: 100%;
   box-shadow: inset 0 -50px 50px -10px #F5F5F5;
@@ -56,7 +57,7 @@ body {
 }
 
 /*  ABOUT  */
-.social-media {
+#social-media {
   width: 100%;
   width: 290px;
   margin: 3% auto;
@@ -88,8 +89,8 @@ body {
   h2 {
     text-align: center;
   }
-  h3 {
-    text-align: left;
+  h4 {
+    text-align: justify;
   }
 }
 
@@ -99,6 +100,13 @@ body {
 }
 
 /*  CONTACT  */
-#contact-info{
+#contact-info {
   height: 100vh;
+}
+#contact-input {
+  width: 80%;
+  form {
+    width: 50%;
+    margin: 0 0 0 auto;
+  }
 }

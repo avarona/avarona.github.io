@@ -19,7 +19,7 @@ const styles = {
 };
 
 // TODO: change to smaller thumbnails
-const projectData = [
+const deployedApps = [
   {
     img: '/style/images/beatles.jpeg',
     title: 'The Beatles Tribute',
@@ -43,11 +43,11 @@ const Portfolio = () => {
   return (
     <div className="grid">
       <hr id="portfolio" className="line" />
-      <h1 className="title center">Deployed</h1>
+      <h1 className="title center">Deployed Apps</h1>
       <div style={styles.root}>
         <GridList style={styles.gridList} cellHeight={200} cols={2} padding={50}>
           {
-            projectData.map((project) => (
+            deployedApps.map((project) => (
               <GridTile
                 key={project.img}
                 title={project.title}
@@ -64,7 +64,7 @@ const Portfolio = () => {
           }
         </GridList>
       </div>
-      <h1 className="title center">Repos</h1>
+      <h1 className="title center">Repositories</h1>
     </div>
   )
 }

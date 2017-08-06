@@ -17,3 +17,6 @@ npm-debug.log
 
 # API keys
 keys.js
+
+# Confirguration
+server/config.js
