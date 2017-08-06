@@ -52,7 +52,7 @@ const Portfolio = () => {
                 key={project.img}
                 title={project.title}
                 actionIcon={
-                  <IconButton>
+                  <IconButton style={{zIndex: '0'}}>
                     <StarBorder color="white" />
                   </IconButton>
                 }>
