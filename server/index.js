@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const nodemailer = require('nodemailer');
-const config = require('./config');
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
@@ -8,8 +7,8 @@ let transporter = nodemailer.createTransport({
   port: 465,
   secure: true, // secure:true for port 465, secure:false for port 587
   auth: {
-    user: config.mailUser,
-    pass: config.mailPass
+    user: process.env.GMAIL_SMTP_USER,
+    pass: process.env.GMAIL_SMTP_PASSWORD
   }
 });
 
@@ -17,8 +16,8 @@ let transporter = nodemailer.createTransport({
 router.post('/email', function(req, res, next) {
   // setup email data with unicode symbols
   const mailOptions = {
-    from: config.mailTo, // sender address
-    to: config.mailTo, // list of receivers
+    from: process.env.GMAIL_SMTP_USER, // sender address
+    to: process.env.GMAIL_SMTP_USER, // list of receivers
     subject: `Contact form - ${req.body.name}`, // Subject line
     text: `
       Name: ${req.body.name}\n
