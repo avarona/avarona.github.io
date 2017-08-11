@@ -41,6 +41,9 @@ html, body {
     padding-bottom: 4%;
     font-size: 40px;
     font-family: 'Pacifico', cursive, sans-serif;
+    color: #222;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
   }
   nav {
     width: 60%;
@@ -88,12 +91,13 @@ html, body {
     word-wrap: break-word;
     width: 20%;
     padding: 40px;
-  }
-  h2 {
-    text-align: center;
-  }
-  h4 {
-    text-align: justify;
+    h2 {
+      text-align: center;
+      color: red;
+    }
+    h4 {
+      text-align: justify;
+    }
   }
 }
 .about-ul {

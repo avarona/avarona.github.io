@@ -69,15 +69,15 @@ class About extends Component {
         <hr className="line" />
         <div className="comment center">
           <div>
-            <h2>* TECH *</h2>
+            <h2>{'{ TECH }'}</h2>
             <h4>&emsp;I create web applications from front to back, using Javascript with it's increasingly popular libraries and frameworks like React or JQuery.</h4>
           </div>
           <div>
-            <h2>* DESIGN *</h2>
+            <h2>{'{ DESIGN }'}</h2>
             <h4>&emsp;Open source libraries are great, but they are no match to having the necessary CSS skills or a keen eye for detail in front-end design.</h4>
           </div>
           <div>
-            <h2>* ENGINEER *</h2>
+            <h2>{'{ ENGINEER }'}</h2>
             <h4>&emsp;I don't shy away from tackling problems head on, visiting all possible outlets until the best solution is found.</h4>
           </div>
         </div>
