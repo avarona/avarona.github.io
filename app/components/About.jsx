@@ -86,7 +86,7 @@ class About extends Component {
           <h1 id="about" className="title center">About Me</h1>
           <div className="line">
             <div className="left-block">
-              <p>Hi, I'm Alejandro and I write code. I attended Fullstack Academy January of 2017, and have since then started some cool projects showcased below. If you like a project or want to get intouch with me, send me a message using the contact form below.</p>
+              <p>Hi, I'm Alejandro and I write code. I attended Fullstack Academy January of 2017, and have since then started some cool projects showcased below. If you like a project or want to get in touch with me, send me a message using the contact form below.</p>
               <ul className="about-ul">
                 <li>
                   Javascript
