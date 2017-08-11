@@ -53,7 +53,7 @@ const repoApps = [
     website: 'https://www.github.com/avarona/react-app'
   }, {
     img: '/style/images/thumbs/quote-machine.jpeg',
-    title: 'Custom Search Engine - Ruby',
+    title: 'Custom Search Engine',
     subtitle: 'Google search in terminal',
     website: 'https://www.github.com/avarona/cse-ruby'
   }, {

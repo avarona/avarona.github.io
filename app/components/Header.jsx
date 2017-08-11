@@ -11,7 +11,7 @@ const Header = () => {
     <div id="header">
       <div className="name">
         <h1 className="center">Alejandro Varona</h1>
-        <h3 className="center">Cool guy</h3>
+        <h3 className="center">Creator. Innovator. Coder.</h3>
       </div>
       <Sticky style={{zIndex: 1}}>
         <nav className="center">

@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   min-width: 940px;
-  font-family: 'Lato';
+  font-family: 'Varela Round', sans-serif;
 }
 .center {
   display: table;
@@ -95,6 +95,10 @@ html, body {
   h4 {
     text-align: justify;
   }
+}
+.about-ul {
+  display: inline-block;
+  vertical-align: text-top;
 }
 
 /*  PORTFOLIO  */

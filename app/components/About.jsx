@@ -86,8 +86,8 @@ class About extends Component {
           <h1 id="about" className="title center">About Me</h1>
           <div className="line">
             <div className="left-block">
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-              <ul>
+              <p>Hi, I'm Alejandro and I write code. I attended Fullstack Academy January of 2017, and have since then started some cool projects showcased below. If you like a project or want to get intouch with me, send me a message using the contact form below.</p>
+              <ul className="about-ul">
                 <li>
                   Javascript
                   <ul>
@@ -98,22 +98,31 @@ class About extends Component {
                   </ul>
                 </li>
                 <li>
-                  HTML
+                  Design
                   <ul>
+                    <li>HTML</li>
                     <li>CSS</li>
                     <li>Sass</li>
                     <li>Bootstrap</li>
                   </ul>
                 </li>
+              </ul>
+              <ul className="about-ul">
                 <li>
-                  Sequelize
+                  Databases
                   <ul>
+                    <li>Sequelize</li>
                     <li>SQL</li>
                   </ul>
                 </li>
-                <li>Webpack</li>
-                <li>Gulp</li>
-                <li>Git</li>
+                <li>
+                  Developer Tools
+                  <ul>
+                    <li>Webpack</li>
+                    <li>Gulp</li>
+                    <li>Git</li>
+                  </ul>
+                </li>
               </ul>
             </div>
             <div id="tech-tree" className="right-block" />
