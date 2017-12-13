@@ -35,7 +35,7 @@ html, body {
 #header {
   background: url('/style/images/nyc-skyline.jpg') no-repeat;
   background-size: 100%;
-  box-shadow: inset 0 -50px 50px -10px #F5F5F5;
+  box-shadow: inset 0 -50px 25px -10px #F5F5F5;
   padding-top: 5%;
   .name {
     padding-bottom: 4%;
@@ -43,7 +43,6 @@ html, body {
     font-family: 'Pacifico', cursive, sans-serif;
     color: #222;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-
   }
   nav {
     width: 60%;
