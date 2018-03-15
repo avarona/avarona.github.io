@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/lib/fa';
+import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope, FaAngellist } from 'react-icons/lib/fa';
 import vis from 'vis';
 
 const nodes = [
@@ -58,6 +58,9 @@ class About extends Component {
           </a>
           <a href="https://www.linkedin.com/in/alejandro-varona" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} />
+          </a>
+          <a href="https://angel.co/alejandro-varona" target="_blank" rel="noreferrer noopener">
+            <FaAngellist size={30} />
           </a>
           <a href="https://www.github.com/avarona" target="_blank" rel="noopener noreferrer">
             <FaGithub size={30} />
