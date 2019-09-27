@@ -1,0 +1,9 @@
+.button-container {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.button-text {
+  font-size: 14px;
+}
