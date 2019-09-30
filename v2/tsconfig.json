@@ -14,13 +14,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "baseUrl": "src",
-    "paths": {
-      "@/*": ["*"],
-      "components/*": ["components/*"],
-      "containers/*": ["containers/*"],
-      "images/*": ["images/*"]
-    }
+    "baseUrl": "src"
   },
   "include": ["src"]
 }
