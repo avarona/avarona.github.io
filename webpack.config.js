@@ -1,45 +1,47 @@
-'use strict';
+"use strict";
 
-const path = require('path');
-const webpack = require('webpack');
+const path = require("path");
+const webpack = require("webpack");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-  entry: './app/origin.jsx',
+  entry: "./app/origin.jsx",
   output: {
-    path: path.join(__dirname, 'public/dist'),
-    filename: 'bundle.js'
+    path: path.join(__dirname, "public/dist"),
+    filename: "bundle.js"
   },
-    node: {
-    fs: 'empty'
+  node: {
+    fs: "empty"
   },
   context: __dirname,
-  devtool: 'source-map',
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      include: /\.min\.js$/
-    }),
-    new webpack.optimize.AggressiveMergingPlugin()
-  ],
+  devtool: "source-map",
+  plugins: [new webpack.optimize.AggressiveMergingPlugin()],
+  // optimization: {
+  //   minimizer: [new UglifyJsPlugin()]
+  // },
+  mode: "production",
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         options: {
-          presets: ['react', 'es2015']
+          presets: ["@babel/preset-react", "@babel/preset-env"]
         }
-      }, {
+      },
+      {
         test: /\.(scss|sass)$/,
         loader: [
-          'style-loader', // creates style nodes from JS strings
-          'css-loader', // translates CSS into CommonJS
-          'sass-loader', // compiles Sass to CSS
+          "style-loader", // creates style nodes from JS strings
+          "css-loader", // translates CSS into CommonJS
+          "sass-loader" // compiles Sass to CSS
         ]
-      }, {
+      },
+      {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        loader: "style-loader!css-loader"
       }
     ]
   }
-}
+};
