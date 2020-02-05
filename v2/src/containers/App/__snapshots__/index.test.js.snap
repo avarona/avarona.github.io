@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Container renders 1`] = `"<div class=\\"container\\"><img src=\\"logo.svg\\" alt=\\"react logo\\"/></div>"`;
