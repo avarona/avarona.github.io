@@ -1,13 +1,23 @@
 import React from "react";
-import styles from "./styles.module.scss";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Projects from "../Projects";
+import About from "../About";
+import Contact from "../Contact";
 import NavBar from "../../components/NavBar";
+import styles from "./styles.module.scss";
 
-function App() {
-  return (
-    <div className={styles.container}>
+const App = () => (
+  <div className={styles.container}>
+    <Router>
       <NavBar />
-    </div>
-  );
-}
+      <div className={styles.content}>
+        <Route path='/projects' component={Projects} />
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
+        <Route exact path='/' />
+      </div>
+    </Router>
+  </div>
+);
 
 export default App;
