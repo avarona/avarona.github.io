@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "../../images/logo.svg";
 import styles from "./styles.module.scss";
+import NavBar from "../../components/NavBar";
 
 function App() {
   return (
     <div className={styles.container}>
-      <img src={logo} alt='react logo' />
+      <NavBar />
     </div>
   );
 }
