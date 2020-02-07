@@ -4,6 +4,7 @@ import Projects from "../Projects";
 import About from "../About";
 import Contact from "../Contact";
 import NavBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
 import styles from "./styles.module.scss";
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
         <Route path='/contact' component={Contact} />
         <Route exact path='/' />
       </div>
+      <Footer />
     </Router>
   </div>
 );
