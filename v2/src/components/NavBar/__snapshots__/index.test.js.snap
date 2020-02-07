@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar Component renders 1`] = `"<nav class=\\"navContainer\\"><div class=\\"wrapper\\"><img class=\\"image styles-module_icon__8puW5\\" src=\\"headshot.png\\" alt=\\"headshot\\"/><ul class=\\"navList\\"><li class=\\"navItem\\"><a href=\\"#portfolio\\">Projects</a></li><li class=\\"navItem\\"><a href=\\"#about\\">About</a></li><li class=\\"navItem\\"><a href=\\"#github\\">Github</a></li><li class=\\"navItem\\"><a href=\\"#linkedin\\">LinkedIn</a></li><li class=\\"navItem\\"><a href=\\"#angel\\">Angel.co</a></li><li class=\\"navItem\\"><a href=\\"#contact\\">Contact</a></li></ul></div></nav>"`;
