@@ -6,8 +6,7 @@ node_modules
 # ...except the symlink to ourselves.
 !node_modules/APP
 
-# Yarn lockfile
-yarn.lock
+# Yarn
 yarn-debug.log
 yarn-error.log
 
