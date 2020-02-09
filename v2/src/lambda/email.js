@@ -1,7 +1,7 @@
-const nodemailer = require("nodemailer");
-
-export const handler = function(event, context, callback) {
+exports.handler = function(event, context, callback) {
+  const nodemailer = require("nodemailer");
   const { ZOHO_NAME, ZOHO_KEY } = process.env;
+
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
     host: "smtp.zoho.com",
