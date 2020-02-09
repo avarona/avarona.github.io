@@ -3,3 +3,5 @@ export const URLS = {
   LINKEDIN: "https://linkedin.com/in/alejandro-varona",
   ANGEL: "https://angel.co/alejandro-varona"
 };
+
+export const NETLIFY_EMAIL = "/.netlify/functions/email";
