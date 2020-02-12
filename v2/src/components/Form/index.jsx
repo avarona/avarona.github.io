@@ -1,28 +1,25 @@
 import React from "react";
-import styles from "./styles.module.scss";
+import { Form, FormField, Box, TextInput, TextArea, Button } from "grommet";
 
 const Contact = ({ onSubmit }) => {
   return (
-    <div className={styles.container}>
-      <form
-        className={styles.form}
-        name='contact-form'
-        action='POST'
-        data-netlify='true'
-        onSubmit={onSubmit}
-      >
-        <label htmlFor='name'>Your Name:</label>
-        <input type='text' name='name' />
+    <Box width='50%'>
+      <Form data-netlify onSubmit={onSubmit} validate='blur' gap='50px'>
+        <FormField name='name' required>
+          <TextInput placeholder='Name' />
+        </FormField>
 
-        <label htmlFor='email'>Your Email:</label>
-        <input type='email' name='email' />
+        <FormField name='email' required>
+          <TextInput placeholder='Email' type='email' />
+        </FormField>
 
-        <label htmlFor='message'>Message:</label>
-        <textarea name='message' />
+        <FormField name='message' required>
+          <TextArea placeholder='Message' resize={false} />
+        </FormField>
 
-        <button type='submit'>Send</button>
-      </form>
-    </div>
+        <Button type='submit' primary label='Submit' />
+      </Form>
+    </Box>
   );
 };
 

@@ -1,12 +1,13 @@
 import React from "react";
 import Form from "../../components/Form";
-import styles from "./styles.module.scss";
+import { Box, Heading } from "grommet";
 import { NETLIFY_EMAIL } from "../../constants";
 
 class Contact extends React.Component {
   sendEmail = e => {
     const { name, email, message } = e.currentTarget;
     e.preventDefault();
+
     fetch(NETLIFY_EMAIL, {
       method: "POST",
       body: JSON.stringify({
@@ -19,10 +20,10 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div className={styles.container}>
-        <h1>Shoot me an email</h1>
+      <Box align='center'>
+        <Heading margin='48px 0'>Shoot me an email</Heading>
         <Form onSubmit={this.sendEmail} />
-      </div>
+      </Box>
     );
   }
 }
