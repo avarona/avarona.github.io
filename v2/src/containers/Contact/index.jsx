@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "../../components/Form";
-import { Box, Heading } from "grommet";
+import { Box } from "grommet";
+import Heading from "../../components/Heading";
 import { NETLIFY_EMAIL } from "../../constants";
 
 class Contact extends React.Component {
@@ -21,7 +22,7 @@ class Contact extends React.Component {
   render() {
     return (
       <Box align='center'>
-        <Heading margin='48px 0'>Shoot me an email</Heading>
+        <Heading>Shoot me an email</Heading>
         <Form onSubmit={this.sendEmail} />
       </Box>
     );

@@ -11,7 +11,8 @@ const theme = {
   global: {
     font: {
       family: "Arial, Helvetica, sans-serif"
-    }
+    },
+    breakpoints: {}
   }
 };
 
@@ -20,7 +21,7 @@ const App = () => (
     <Grommet theme={theme} full>
       <Main>
         <NavBar />
-        <Box flex>
+        <Box flex overflow='auto'>
           <Route path='/projects' component={Projects} />
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />

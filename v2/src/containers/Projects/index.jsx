@@ -1,9 +1,11 @@
 import React from "react";
+import { Box } from "grommet";
+import Heading from "../../components/Heading";
 
 const Projects = () => (
-  <div>
-    <h1>My Projects</h1>
-  </div>
+  <Box align='center'>
+    <Heading>My Projects</Heading>
+  </Box>
 );
 
 export default Projects;
