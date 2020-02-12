@@ -1,46 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./styles.module.scss";
-import { URLS } from "../../constants";
+import { Box, Header, Nav, Anchor, Image } from "grommet";
 import headshot from "../../images/headshot.png";
-import { Icon } from "@avarona/react-components";
 
-const NavBar = ({ children }) => (
-  <>
-    <nav className={styles.navContainer}>
-      <Link className={styles.link} to='/'>
-        <Icon addClass={styles.image} img={headshot} alt='headshot' size={40} />
-      </Link>
+const items = [
+  { href: "/projects", label: "Projects" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" }
+];
 
-      <ul className={styles.navList}>
-        <li className={styles.navItem}>
-          <Link to='/projects'>Projects</Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link to='/about'>About</Link>
-        </li>
-        <li className={styles.navItem}>
-          <a href={URLS.GITHUB} target='_blank' rel='noopener noreferrer'>
-            Github
-          </a>
-        </li>
-        <li className={styles.navItem}>
-          <a href={URLS.LINKEDIN} target='_blank' rel='noopener noreferrer'>
-            LinkedIn
-          </a>
-        </li>
-        <li className={styles.navItem}>
-          <a href={URLS.ANGEL} target='_blank' rel='noopener noreferrer'>
-            Angel.co
-          </a>
-        </li>
-        <li className={styles.navItem}>
-          <Link to='/contact'>Contact</Link>
-        </li>
-      </ul>
-    </nav>
-    {children}
-  </>
+const NavBar = () => (
+  <Header background='drk-1' pad='medium'>
+    <Box direction='row' align='center' gap='small'>
+      <Box height='xxsmall' width='xxsmall' round='full' flex='false'>
+        <Image src={headshot} fit='cover' />
+      </Box>
+      <Anchor href='/'>Alejandro Varona</Anchor>
+    </Box>
+
+    <Nav direction='row'>
+      {items.map(item => (
+        <Link key={item.label} to={item.href}>
+          {item.label}
+        </Link>
+      ))}
+    </Nav>
+  </Header>
 );
 
 export default NavBar;

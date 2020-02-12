@@ -1,6 +1,7 @@
 import React from "react";
 import { Footer as GrommetFooter, Text, Box, Anchor } from "grommet";
 import { Github, LinkedinOption } from "grommet-icons";
+import { URLS } from "../../constants";
 
 const Footer = () => (
   <GrommetFooter background='light-2' pad='small'>
@@ -13,18 +14,20 @@ const Footer = () => (
     <Box direction='row' gap='xxsmall' justify='center'>
       <Anchor
         a11yTitle='Share feedback on Github'
-        href='https://www.github.com/avarona'
+        href={URLS.GITHUB}
+        target='_blank'
         icon={<Github color='brand' />}
       />
       <Anchor
         a11yTitle='Check out my LinkedIn'
-        href='https://www.linkedin.com/in/alejandro-varona'
+        href={URLS.LINKEDIN}
+        target='_blank'
         icon={<LinkedinOption color='brand' />}
       />
     </Box>
 
     <Text textAlign='center' size='xsmall'>
-      Copyright © <Anchor href='https://www.varona.io'>varona.io</Anchor>
+      Copyright © <Anchor href={URLS.VARONA}>varona.io</Anchor>
     </Text>
   </GrommetFooter>
 );
