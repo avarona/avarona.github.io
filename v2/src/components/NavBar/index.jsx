@@ -12,7 +12,7 @@ const items = [
 const NavBar = () => (
   <Header background='drk-1' pad='medium'>
     <Box direction='row' align='center' gap='small'>
-      <Box height='xxsmall' width='xxsmall' round='full' flex='false'>
+      <Box height='xxsmall' width='xxsmall' round='full'>
         <Image src={headshot} fit='cover' />
       </Box>
       <Anchor href='/'>Alejandro Varona</Anchor>

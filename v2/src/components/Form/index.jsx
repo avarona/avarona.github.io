@@ -1,23 +1,37 @@
 import React from "react";
 import { Form, FormField, Box, TextInput, TextArea, Button } from "grommet";
+import { Spinning } from "grommet";
 
-const Contact = ({ onSubmit }) => {
+const Contact = ({ onSubmit, loading }) => {
   return (
-    <Box width='50%'>
-      <Form data-netlify onSubmit={onSubmit} validate='blur' gap='50px'>
-        <FormField name='name' required>
-          <TextInput placeholder='Name' />
-        </FormField>
+    <Box width='500px'>
+      <Form
+        name='contact-form'
+        data-netlify='true'
+        onSubmit={onSubmit}
+        gap='50px'
+      >
+        <FormField name='name' label='Name' component={TextInput} required />
 
-        <FormField name='email' required>
-          <TextInput placeholder='Email' type='email' />
-        </FormField>
+        <FormField
+          name='email'
+          label='Email'
+          type='email'
+          component={TextInput}
+          required
+        />
 
-        <FormField name='message' required>
-          <TextArea placeholder='Message' resize={false} />
-        </FormField>
+        <FormField
+          id='message'
+          name='message'
+          label='Message'
+          resize={false}
+          component={TextArea}
+        />
 
-        <Button type='submit' primary label='Submit' />
+        <Button type='submit' primary>
+          {loading ? Spinning : "Submit"}
+        </Button>
       </Form>
     </Box>
   );

@@ -5,9 +5,15 @@ import Heading from "../../components/Heading";
 import { NETLIFY_EMAIL } from "../../constants";
 
 class Contact extends React.Component {
+  state = {
+    loading: false
+  };
+
   sendEmail = e => {
     const { name, email, message } = e.currentTarget;
+    console.log("asdfasf", e.currentTarget);
     e.preventDefault();
+    this.setState({ loading: true });
 
     fetch(NETLIFY_EMAIL, {
       method: "POST",
@@ -16,6 +22,10 @@ class Contact extends React.Component {
         email: email.value,
         message: message.value
       })
+    }).then(res => {
+      console.log("helllo");
+
+      this.setState({ loading: false });
     });
   };
 
@@ -23,7 +33,7 @@ class Contact extends React.Component {
     return (
       <Box align='center'>
         <Heading>Shoot me an email</Heading>
-        <Form onSubmit={this.sendEmail} />
+        <Form onSubmit={this.sendEmail} loading={this.state.loading} />
       </Box>
     );
   }
