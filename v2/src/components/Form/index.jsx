@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, FormField, Box, TextInput, TextArea, Button } from "grommet";
-import { Spinning } from "grommet";
+import Spinner from '../Spinner';
 
 const Contact = ({ onSubmit, loading }) => {
   return (
@@ -11,11 +11,11 @@ const Contact = ({ onSubmit, loading }) => {
         onSubmit={onSubmit}
         gap='50px'
       >
-        <FormField name='name' label='Name' component={TextInput} required />
+        <FormField name='name' placeholder='Name' component={TextInput} required />
 
         <FormField
           name='email'
-          label='Email'
+          placeholder='Email'
           type='email'
           component={TextInput}
           required
@@ -24,14 +24,18 @@ const Contact = ({ onSubmit, loading }) => {
         <FormField
           id='message'
           name='message'
-          label='Message'
+          placeholder='Message'
           resize={false}
           component={TextArea}
         />
 
-        <Button type='submit' primary>
-          {loading ? Spinning : "Submit"}
+        <Button type='submit' primary size="large" gap="50px">
+          SUBMIT
+          {/* {loading ? 'Submit' : <Spinner />} */}
         </Button>
+        {/* <Button type='submit' primary>
+          {!loading ? 'Submit' : <Spinner />}
+        </Button> */}
       </Form>
     </Box>
   );

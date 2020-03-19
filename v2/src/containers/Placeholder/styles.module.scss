@@ -1,0 +1,23 @@
+.placeholderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  background: #333;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 5%;
+}
+
+.description {
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+}
+
+.box {
+  margin-top: 5%;
+}
