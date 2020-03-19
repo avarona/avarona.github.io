@@ -21,3 +21,10 @@
 .box {
   margin-top: 5%;
 }
+
+@media (max-width: 450px) {
+  .description {
+    font-size: 26px;
+    line-height: 38px;
+  }
+}
